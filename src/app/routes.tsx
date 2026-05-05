@@ -7,17 +7,22 @@ import { Professionals } from "./pages/Professionals";
 import { Testimonials } from "./pages/Testimonials";
 import { Contact } from "./pages/Contact";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      Component: Root,
+      children: [
+        { index: true, Component: Home },
+        { path: "about", Component: About },
+        { path: "courses", Component: Courses },
+        { path: "professionals", Component: Professionals },
+        { path: "testimonials", Component: Testimonials },
+        { path: "contact", Component: Contact },
+      ],
+    },
+  ],
   {
-    path: "/",
-    Component: Root,
-    children: [
-      { index: true, Component: Home },
-      { path: "about", Component: About },
-      { path: "courses", Component: Courses },
-      { path: "professionals", Component: Professionals },
-      { path: "testimonials", Component: Testimonials },
-      { path: "contact", Component: Contact },
-    ],
+    basename: "/le-tibeb",
   },
-]);
+);
