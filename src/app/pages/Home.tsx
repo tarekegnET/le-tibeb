@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { ArrowRight, BookOpen, GraduationCap, Users, Globe } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImage from "../assets/hero-image.jpg";
+import heroImage from "../../imports/Vector.png";
 
 export function Home() {
   return (
